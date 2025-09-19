@@ -1,0 +1,18 @@
+CREATE DATABASE DDL02_09;
+
+USE DDL02_09;
+
+CREATE TABLE Estados (
+	id_estado INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(60) NOT NULL,
+    sigla CHAR(2) UNIQUE NOT NULL
+);
+
+
+CREATE TABLE Cidades (
+	id_cidade INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(100) NOT NULL,
+    populacao INT NOT NULL,
+    id_estado INT NOT NULL,
+    FOREIGN KEY (id_estado) REFERENCES Estados(id_estado)
+);

@@ -1,0 +1,17 @@
+CREATE DATABASE DDL02_08;
+
+USE DDL02_08;
+
+CREATE TABLE Marcas (
+	id_marca INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(80) NOT NULL,
+    pais_origem VARCHAR(60) NOT NULL
+);
+
+CREATE TABLE Carro (
+	id_carro INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    modelo VARCHAR(100) NOT NULL,
+    ano INT NOT NULL,
+    id_marca INT NOT NULL,
+    FOREIGN KEY (id_marca) REFERENCES Marcas(id_marca)
+);

@@ -1,0 +1,17 @@
+CREATE DATABASE DDL02;
+
+USE DDL02;
+
+CREATE TABLE Autores (
+    id_autor INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(100) NOT NULL,
+    nacionalidade VARCHAR(60) NOT NULL
+);
+
+CREATE TABLE Livros (
+	id_livro INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    titulo VARCHAR(150) NOT NULL,
+    ano_publicacao INT NOT NULL,
+    id_autor INT NOT NULL,
+    FOREIGN KEY (id_autor) REFERENCES Autores(id_autor)
+);

@@ -16,7 +16,7 @@ CREATE TABLE Ingressos(
      preco DECIMAL(10,2) NOT NULL,
      lote INT NOT NULL,
      FOREIGN KEY (evento_id)  REFERENCES Eventos(id)
-);
+    );
     
 CREATE TABLE Clientes (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,

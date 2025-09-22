@@ -1,8 +1,5 @@
 USE DDL5_12; 
 
-USE DDL5_12;
-
-
 INSERT INTO Cursos (nome, carga_horaria, modalidade, ativo)
 VALUES
 ('Banco de dados', 720, 'EAD', TRUE),
@@ -102,3 +99,16 @@ DELETE FROM Autores
 WHERE nome NOT IN (
     SELECT autor FROM (SELECT autor FROM Livros) AS temp
 );
+
+INSERT INTO Emprestimos (aluno_id, livro_id, data_saida, data_devolucao)
+VALUES
+(1, 1, '2025-09-21 10:00:00', '2025-10-01'),
+(2, 2, '2025-09-22 15:30:00', '2025-01-05'); 
+
+
+UPDATE Emprestimos
+SET data_devolucao = '2025-10-10'
+WHERE id = 1;
+
+DELETE FROM Emprestimos
+WHERE data_devolucao < CURDATE();

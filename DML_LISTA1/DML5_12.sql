@@ -1,16 +1,19 @@
 USE DDL5_12; 
 
+USE DDL5_12;
+
+
 INSERT INTO Cursos (nome, carga_horaria, modalidade, ativo)
 VALUES
 ('Banco de dados', 720, 'EAD', TRUE),
 ('Hacker do zero ao avançado', 20, 'EAD', TRUE),
 ('Injeções SQL', 200, 'Presencial', FALSE);
 
-
+SET SQL_SAFE_UPDATES = 0;
 UPDATE Cursos
 SET carga_horaria = 2000
 WHERE nome = 'Banco de dados';
-
+SET SQL_SAFE_UPDATES = 1;
 
 INSERT INTO Alunos (nome, email, curso_id)
 VALUES
@@ -23,11 +26,11 @@ VALUES
 ('Felipe Spec', 'felipinho@email.com', 2);
 
 
-
+SET SQL_SAFE_UPDATES = 0;
 UPDATE Alunos
 SET email = 'felipinhoSpec@gmail.com'
 WHERE id = 7;
-
+SET SQL_SAFE_UPDATES = 1;
 
 UPDATE Cursos
 SET ativo = FALSE

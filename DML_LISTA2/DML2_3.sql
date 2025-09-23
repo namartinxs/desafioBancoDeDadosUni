@@ -22,7 +22,7 @@ CREATE TABLE Funcionarios (
 
 INSERT INTO Departamentos (codigo, nome, centro_custo, ativo) VALUES ('DEP01', 'Financeiro', 'CC001', TRUE);
 INSERT INTO Departamentos (codigo, nome, centro_custo, ativo) VALUES ('DEP02', 'Administrativo', 'CC002', TRUE);
- 
+
 INSERT INTO Funcionarios ( nome, cpf, cargo, salario, id_departamento) VALUES ('Fernando Fonseca', '12345678901', 'Analista', 3400.00, 1);
 INSERT INTO Funcionarios ( nome, cpf, cargo, salario, id_departamento) VALUES ('Larissa Santos', '01289352567', 'Contadora', 4200.00, 1);
 INSERT INTO Funcionarios ( nome, cpf, cargo, salario, id_departamento) VALUES ('Henrique de Albuquerque', '00284982567', 'Assistente', 2110.00, 1);
